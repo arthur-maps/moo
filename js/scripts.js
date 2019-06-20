@@ -7,11 +7,11 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 }).addTo(map);
 
 
-L.esri.tiledMapLayer({
-  url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/Florida_Ag_Stratum/VectorTileServer',
-  maxZoom: 15
-}).addTo(map);
+//L.esri.tiledMapLayer({
+//  url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/Florida_Ag_Stratum/VectorTileServer',
+//  maxZoom: 15
+//}).addTo(map);
 
- // L.esri.Vector.layer('4bd5c14d1b2c4475bc8e423bce89bdc8').addTo(map);
+L.esri.Vector.layer('4bd5c14d1b2c4475bc8e423bce89bdc8').addTo(map);
 
 
