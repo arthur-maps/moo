@@ -6,4 +6,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
     attribution: "© Mapbox"
 }).addTo(map);
 
-L.geoJson(statesData).addTo(map);
+
+  L.esri.Vector.layer('https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/Florida_Ag_Stratum/VectorTileServer').addTo(map);
+
+
