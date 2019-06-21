@@ -12,6 +12,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
   //maxZoom: 15
 //}).addTo(map);
 
-L.esri.Vector.layer('72be31d1fa6a42fc895d9a3c0fd8aeef').addTo(map);
+L.esri.Vector.layer('6f0044f50bd24142897d4955ee28f823').addTo(map);
 
 
