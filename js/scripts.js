@@ -12,6 +12,12 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
   //maxZoom: 15
 //}).addTo(map);
 
-L.esri.Vector.layer('6f0044f50bd24142897d4955ee28f823').addTo(map);
+//for backgrounds really
+//L.esri.Vector.layer('6f0044f50bd24142897d4955ee28f823').addTo(map);
+
+  // a Leaflet marker is used by default to symbolize point features.
+  L.esri.featureLayer({
+    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_WGS1984/FeatureServer'
+  }).addTo(map);
 
 
