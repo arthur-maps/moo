@@ -3,7 +3,7 @@ var mapboxAccessToken = 'pk.eyJ1IjoiYXJ0aHVyLW1hcHMiLCJhIjoiY2p4NHdjNXJrMDI1azQ5
 
 var map = L.map('mapid', {
         minZoom: 6,
-        maxZoom: 10
+        maxZoom: 12
     });
 
 //var map = L.map('mapid').setView([28.5, -81.6], 7);
