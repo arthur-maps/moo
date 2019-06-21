@@ -13,7 +13,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
     attribution: "© Mapbox"
 }).addTo(map);
 
-map.setView([28.0, -82.8], 7);
+map.setView([28.0, -82.8], 6.8);
 
 //L.esri.tiledMapLayer({
  // url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_WGS1984/VectorTileServer',
