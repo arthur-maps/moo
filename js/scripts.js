@@ -37,5 +37,4 @@ map.setView([28.0, -82.8], 6.8);
       } 
     }
   }).addTo(map);
-    
-  }).addTo(map);
+
