@@ -2,8 +2,8 @@ var mapboxAccessToken = 'pk.eyJ1IjoiYXJ0aHVyLW1hcHMiLCJhIjoiY2p4NHdjNXJrMDI1azQ5
    
 
 var map = L.map('mapid', {
-        minZoom: 5,
-        maxZoom: 15
+        minZoom: 6,
+        maxZoom: 10
     });
 
 //var map = L.map('mapid').setView([28.5, -81.6], 7);
@@ -13,7 +13,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
     attribution: "© Mapbox"
 }).addTo(map);
 
-map.setView([28.5, -81.6], 7);
+map.setView([28.0, -82.8], 7);
 
 //L.esri.tiledMapLayer({
  // url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_WGS1984/VectorTileServer',
