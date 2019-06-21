@@ -17,7 +17,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 
   // a Leaflet marker is used by default to symbolize point features.
   L.esri.featureLayer({
-    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_WGS1984/FeatureServer'
+    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_WGS1984/FeatureServer/0',
+    simplifyFactor: 0.5,
+    precision: 5
   }).addTo(map);
-
-
