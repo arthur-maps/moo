@@ -25,7 +25,7 @@ map.setView([28.0, -82.8], 6.5);
 
  //a Leaflet marker is used by default to symbolize point features.
  L.esri.featureLayer({
-    url: 'hhttps://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_citrus/FeatureServer/0',
+    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_citrus/FeatureServer/0',
      simplifyFactor: 0.35,
    precision: 5,
      style: function (feature) {
