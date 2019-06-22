@@ -32,15 +32,15 @@ map.setView([28.0, -82.8], 6.5);
       if(feature.properties.Strata === 17){
       return { color: 'orange', fillOpacity:70 };
       } else if(feature.properties.Strata === 18){
-      return { fillOpacity:70 };
+      return { fillOpacity:0.7 };
       } else if(feature.properties.Strata === 13){
-      return { fillOpacity:70 };
+      return { fillOpacity:0.7 };
       } else if(feature.properties.Strata === 21){
-      return { fillOpacity:70 };
+      return { fillOpacity:0.7 };
       } else if(feature.properties.Strata === 22){
-      return { fillOpacity:70 };
+      return { fillOpacity:0.7 };
       } else if(feature.properties.Strata === 27){
-      return { fillOpacity:70 };
+      return { fillOpacity:0.7 };
       } else if(feature.properties.Strata === 31){
       return { fillOpacity: 0 };
       } else if(feature.properties.Strata === 32){
