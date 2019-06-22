@@ -10,7 +10,7 @@ var map = L.map('mapid', {
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
     id: 'mapbox.light',
-    attribution: "© Mapbox"
+    attribution: "© Mapbox | USDA Agricultural Statistics Service"
 }).addTo(map);
 
 map.setView([28.0, -82.8], 6.5);
