@@ -38,7 +38,9 @@ map.setView([28.0, -82.8], 6.5);
       } else if(feature.properties.Strata === 40){
       return { fillOpacity: 0 };
       } else if(feature.properties.Strata === 42){
-       return { fillOpacity: 0 };
+      return { fillOpacity: 0 };
+      } else if(feature.properties.Strata === 50){
+      return { fillOpacity: 0 };
       } 
    }
   }).addTo(map);
