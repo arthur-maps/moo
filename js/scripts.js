@@ -29,13 +29,13 @@ map.setView([28.0, -82.8], 6.5);
      simplifyFactor: 0.35,
    precision: 5,
      style: function (feature) {
-         if(feature.properties.Strata === 17){
+      if(feature.properties.Strata === 17){
       return { color: "Orange" };
-            if(feature.properties.Strata === 31){
+      } else if(feature.properties.Strata === 31){
       return { fillOpacity: 0 };
-               if(feature.properties.Strata === 32){
+      } else if(feature.properties.Strata === 32){
       return { fillOpacity: 0 };
-      if(feature.properties.Strata === 40){
+      } else if(feature.properties.Strata === 40){
       return { fillOpacity: 0 };
       } else if(feature.properties.Strata === 42){
        return { fillOpacity: 0 };
