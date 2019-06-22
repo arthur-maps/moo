@@ -23,7 +23,7 @@ map.setView([28.0, -82.8], 6.5);
 //for backgrounds really
 //L.esri.Vector.layer('6f0044f50bd24142897d4955ee28f823').addTo(map);
 
- a Leaflet marker is used by default to symbolize point features.
+ //a Leaflet marker is used by default to symbolize point features.
  L.esri.featureLayer({
     url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_shapefile_WGS1984_Simplif/FeatureServer/0',
      simplifyFactor: 0.35,
