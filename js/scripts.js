@@ -24,7 +24,7 @@ map.setView([28.0, -82.8], 6.5);
 //L.esri.Vector.layer('6f0044f50bd24142897d4955ee28f823').addTo(map);
 
  //a Leaflet marker is used by default to symbolize point features.
- L.esri.featureLayer({
+ var strata = L.esri.featureLayer({
     url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_definitions/FeatureServer',
      simplifyFactor: 0.35,
    precision: 5,
@@ -56,6 +56,10 @@ map.setView([28.0, -82.8], 6.5);
       } 
    }
   }).addTo(map);
+
+ strata.bindPopup(function (layer) {
+    return L.Util.template('<p>{Stratum}<br>{Definition}</p>', layer.feature.properties);
+  });
 
 //L.esri.tiledMapLayer({
  //  url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/flcrops/MapServer'
