@@ -3,14 +3,21 @@ var mapboxAccessToken = 'pk.eyJ1IjoiYXJ0aHVyLW1hcHMiLCJhIjoiY2p4N3AxMnl2MGN0MzN6
 
 var map = L.map('mapid', {
         minZoom: 6,
-        maxZoom: 12
+        maxZoom: 12,
+        maxBoundsViscosity: 1.0
     });
 
 //var map = L.map('mapid').setView([28.5, -81.6], 7);
 
+var southWest = L.latLng(21.21, -92.20),
+                northEast = L.latLng(34.15, -74.18),
+                mybounds = L.latLngBounds(southWest, northEast);
+
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
     id: 'mapbox.light',
+     bounds: mybounds,
     attribution: "© Mapbox | USDA Agricultural Statistics Service"
+   
 }).addTo(map);
 
 map.setView([28.0, -82.8], 6.5);
