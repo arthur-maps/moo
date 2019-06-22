@@ -23,21 +23,21 @@ map.setView([28.0, -82.8], 6.5);
 //for backgrounds really
 //L.esri.Vector.layer('6f0044f50bd24142897d4955ee28f823').addTo(map);
 
-  // a Leaflet marker is used by default to symbolize point features.
- // L.esri.featureLayer({
-  //  url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/flstratnobounds/FeatureServer/0',
-   //   simplifyFactor: 0.35,
-   // precision: 5,
-  //    style: function (feature) {
-   //   if(feature.properties.Strata === 40){
-   //     return { fillOpacity: 0 };
-    //  } else if(feature.properties.Strata === 42){
-    //    return { fillOpacity: 0 };
- //     } 
- //   }
-//  }).addTo(map);
+ a Leaflet marker is used by default to symbolize point features.
+ L.esri.featureLayer({
+    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_shapefile_WGS1984_Simplif/FeatureServer/0',
+     simplifyFactor: 0.35,
+   precision: 5,
+     style: function (feature) {
+      if(feature.properties.Strata === 40){
+      return { fillOpacity: 0 };
+      } else if(feature.properties.Strata === 42){
+       return { fillOpacity: 0 };
+      } 
+   }
+  }).addTo(map);
 
-L.esri.tiledMapLayer({
-   url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/flcrops/MapServer'
-}).addTo(map);
+//L.esri.tiledMapLayer({
+ //  url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/flcrops/MapServer'
+//}).addTo(map);
 
