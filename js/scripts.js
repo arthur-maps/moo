@@ -30,7 +30,7 @@ map.setView([28.0, -82.8], 6.5);
    precision: 5,
      style: function (feature) {
       if(feature.properties.Strata === 17){
-      return { color: "Orange" };
+      return { color: "FFA500" };
       } else if(feature.properties.Strata === 31){
       return { fillOpacity: 0 };
       } else if(feature.properties.Strata === 32){
