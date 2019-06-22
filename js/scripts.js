@@ -3,9 +3,9 @@ var mapboxAccessToken = 'pk.eyJ1IjoiYXJ0aHVyLW1hcHMiLCJhIjoiY2p4N3AxMnl2MGN0MzN6
 
 var map = L.map('mapid', {
         minZoom: 6,
-        maxZoom: 12,
-       bounds: mybounds,
-       maxBoundsViscosity: 1.0
+        maxZoom: 12
+      // bounds: mybounds,
+       //maxBoundsViscosity: 1.0
    
     });
 
@@ -17,8 +17,8 @@ var southWest = L.latLng(21.21, -92.20),
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
     id: 'mapbox.light',
-     bounds: mybounds,
-     maxBoundsViscosity: 1.0,
+     //bounds: mybounds,
+     //maxBoundsViscosity: 1.0,
     attribution: "© Mapbox | USDA Agricultural Statistics Service"
    
 }).addTo(map);
