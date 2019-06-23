@@ -74,11 +74,11 @@ map.setView([28.0, -82.8], 6.5);
 //var legend = L.control({position: 'bottomright'});
 
 function getColor(d) {
-        return d === 'High Cultivation'  ? "#de2d26" :
-               d === 'Medium Cultivation'  ? "#377eb8" :
-               d === 'High Cultivation: Citrus' ? "#4daf4a" :
-               d === 'Medium Cultivation: Citrus' ? "#984ea3" :
-               d === 'Sugar Cane' ? "#984ea3" :
+        return d === 'High Cultivation'  ? "#38A800" :
+               d === 'Medium Cultivation'  ? "#98E600" :
+               d === 'High Cultivation: Citrus' ? "#FFAA00" :
+               d === 'Medium Cultivation: Citrus' ? "#FFD37F" :
+               d === 'Sugar Cane' ? "#00C5FF" :
                             "#ff7f00";
     }
 
