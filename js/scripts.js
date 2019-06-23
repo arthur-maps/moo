@@ -88,7 +88,7 @@ function getColor(d) {
             opacity: 1,
             fillOpacity: 1,
             radius: 6,
-            fillColor: getColor(feature.properties.TypeOfIssue),
+            fillColor: getColor(feature.properties.Stratum),
             color: "grey"
 
         };
