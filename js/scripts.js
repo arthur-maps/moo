@@ -71,7 +71,47 @@ map.setView([28.0, -82.8], 6.5);
     return L.Util.template('<p>{Stratum}<br>{Definition}</p>', layer.feature.properties);
   });
 
-//L.esri.tiledMapLayer({
- //  url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/flcrops/MapServer'
-//}).addTo(map);
+//var legend = L.control({position: 'bottomright'});
+
+function getColor(d) {
+        return d === 'High Cultivation'  ? "#de2d26" :
+               d === 'Medium Cultivation'  ? "#377eb8" :
+               d === 'High Cultivation: Citrus' ? "#4daf4a" :
+               d === 'Medium Cultivation: Citrus' ? "#984ea3" :
+               d === 'Sugar Cane' ? "#984ea3" :
+                            "#ff7f00";
+    }
+
+    function style(feature) {
+        return {
+            weight: 1.5,
+            opacity: 1,
+            fillOpacity: 1,
+            radius: 6,
+            fillColor: getColor(feature.properties.TypeOfIssue),
+            color: "grey"
+
+        };
+    }
+
+var legend = L.control({position: 'bottomleft'});
+    legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend');
+    labels = ['<strong>Categories</strong>'],
+    categories = ['High Cultivation','Medium Cultivation','High Cultivation: Citrus','Medium Cultivation: Citrus','Sugar Cane'];
+
+    for (var i = 0; i < categories.length; i++) {
+
+            div.innerHTML += 
+            labels.push(
+                '<i class="circle" style="background:' + getColor(categories[i]) + '"></i> ' +
+            (categories[i] ? categories[i] : '+'));
+
+        }
+        div.innerHTML = labels.join('<br>');
+    return div;
+    };
+    legend.addTo(map);
+
 
