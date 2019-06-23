@@ -98,14 +98,14 @@ var legend = L.control({position: 'bottomleft'});
     legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');
-    labels = ['<strong>Categories</strong>'],
+    labels = ['<strong>Land Use Strata</strong>'],
     categories = ['High Cultivation','Medium Cultivation','High Cultivation: Citrus','Medium Cultivation: Citrus','Sugar Cane'];
 
     for (var i = 0; i < categories.length; i++) {
 
             div.innerHTML += 
             labels.push(
-                '<i class="circle" style="background:' + getColor(categories[i]) + '"></i> ' +
+                '<i class="rectangle" style="background:' + getColor(categories[i]) + '"></i> ' +
             (categories[i] ? categories[i] : '+'));
 
         }
