@@ -79,7 +79,7 @@ var title = L.control({position: 'topright'});
                '<h1></h1>');
 
         //}
-        div.innerHTML = labels.join('<br>');
+       // div.innerHTML = labels.join('<br>');
     return div;
     };
     title.addTo(map);
