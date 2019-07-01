@@ -45,9 +45,9 @@ map.setView([37.74, -119.5], 6.5);
 //var legend = L.control({position: 'bottomright'});
 
 function getColor(d) {
-        return d === 'Correct Address'  ? "green" :
-               d === 'Interpolated on Correct Street'  ? "orange" :
-               d === 'Correct Street Only' ? "red" :
+        return d === 'Correct Address'  ? "#4CE600" :
+               d === 'Interpolated on Correct Street'  ? "#FFAA00" :
+               d === 'Correct Street Only' ? "#E60000" :
                d === 'Postal Code' ? "black" :
                             "#ff7f00";
     }
