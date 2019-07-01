@@ -3,7 +3,7 @@ var mapboxAccessToken = 'pk.eyJ1IjoiYXJ0aHVyLW1hcHMiLCJhIjoiY2p4N3AxMnl2MGN0MzN6
 
 var map = L.map('mapid', {
         minZoom: 6,
-        maxZoom: 12
+        maxZoom: 15
       // bounds: mybounds,
        //maxBoundsViscosity: 1.0
    
@@ -23,7 +23,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
    
 }).addTo(map);
 
-map.setView([28.0, -82.8], 6.5);
+map.setView([37.74, -119.5], 6.5);
 
 //L.esri.tiledMapLayer({
  // url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_WGS1984/VectorTileServer',
@@ -35,36 +35,7 @@ map.setView([28.0, -82.8], 6.5);
 
  //a Leaflet marker is used by default to symbolize point features.
  var strata = L.esri.featureLayer({
-    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_definitions/FeatureServer/0',
-     simplifyFactor: 0.35,
-   precision: 5,
-     style: function (feature) {
-      if(feature.properties.Strata === 17){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 18){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 13){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 21){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 22){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 27){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 31){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 32){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 40){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 42){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 50){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 62){
-      return { fillOpacity: 0 };
-      } 
-   }
+    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/plants/FeatureServer/0'
   }).addTo(map);
 
  strata.bindPopup(function (layer) {
@@ -74,11 +45,10 @@ map.setView([28.0, -82.8], 6.5);
 //var legend = L.control({position: 'bottomright'});
 
 function getColor(d) {
-        return d === 'High Cultivation'  ? "#38A800" :
-               d === 'Medium Cultivation'  ? "#98E600" :
-               d === 'High Cultivation: Citrus' ? "#FFAA00" :
-               d === 'Medium Cultivation: Citrus' ? "#FFD37F" :
-               d === 'Sugar Cane' ? "#00C5FF" :
+        return d === 'Correct Address'  ? "green" :
+               d === 'Interpolated on Correct Street'  ? "orange" :
+               d === 'Correct Street Only' ? "red" :
+               d === 'Postal Code' ? "black" :
                             "#ff7f00";
     }
 
@@ -99,7 +69,7 @@ var legend = L.control({position: 'bottomleft'});
 
     var div = L.DomUtil.create('div', 'info legend');
     labels = ['<strong>Land Use Strata</strong>'],
-    categories = ['High Cultivation','Medium Cultivation','High Cultivation: Citrus','Medium Cultivation: Citrus','Sugar Cane'];
+    categories = ['Correct Address','Interpolated on Correct Street','Correct Street Only','Medium Cultivation: Postal Code'];
 
     for (var i = 0; i < categories.length; i++) {
 
