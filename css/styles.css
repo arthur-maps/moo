@@ -4,8 +4,10 @@ html, body, #mapid {
     width: 100vw;
 }
 
-.rectangle {
-    
+.circle {
+    border-radius:50%;
+    border-color:black;
+    border-width: 2px; 
 }
 
 
