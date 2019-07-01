@@ -106,4 +106,7 @@ var legend = L.control({position: 'bottomleft'});
     };
     legend.addTo(map);
 
+var scale = L.control({position: 'bottomright'});
+scale.addTo(map);
+
 
