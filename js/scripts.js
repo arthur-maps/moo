@@ -76,7 +76,7 @@ var title = L.control({position: 'topleft'});
 
            div.innerHTML += 
             labels.push(
-               '<h1></h1>';
+               '<h1></h1>');
 
         //}
         div.innerHTML = labels.join('<br>');
