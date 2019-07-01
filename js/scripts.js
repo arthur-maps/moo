@@ -65,7 +65,7 @@ function getColor(d) {
     }
 
 
-var title = L.control({position: 'topleft'});
+var title = L.control({position: 'topright'});
     title.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');
