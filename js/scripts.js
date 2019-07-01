@@ -64,6 +64,28 @@ function getColor(d) {
         };
     }
 
+
+var title = L.control({position: 'topleft'});
+    title.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend');
+    labels = ['<strong>Cali Dairies</strong>'],
+    //categories = ['Correct Address','Interpolated on Correct Street','Correct Street Only','Postal Code'];
+
+    //for (var i = 0; i < categories.length; i++) {
+
+           div.innerHTML += 
+            labels.push(
+               '<h1></h1>';
+
+        //}
+        div.innerHTML = labels.join('<br>');
+    return div;
+    };
+    title.addTo(map);
+
+
+
 var legend = L.control({position: 'bottomleft'});
     legend.onAdd = function (map) {
 
