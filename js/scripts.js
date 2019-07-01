@@ -69,7 +69,7 @@ var title = L.control({position: 'topright'});
     title.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info title');
-    labels = ['<strong>Cali Dairies</strong>'],
+    labels = ['<strong>California Dairies</strong>'],
     //categories = ['Correct Address','Interpolated on Correct Street','Correct Street Only','Postal Code'];
 
     //for (var i = 0; i < categories.length; i++) {
