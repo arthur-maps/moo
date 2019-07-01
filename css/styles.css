@@ -28,6 +28,12 @@ html, body, #mapid {
     margin: 0 0 5px;
     color: #777;
 }
+
+.title {
+    line-height: 32px;
+    color: #555;
+}
+
 .legend {
     line-height: 18px;
     color: #555;
