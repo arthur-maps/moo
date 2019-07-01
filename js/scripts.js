@@ -39,7 +39,7 @@ map.setView([37.74, -119.5], 6.5);
   }).addTo(map);
 
  strata.bindPopup(function (layer) {
-    return L.Util.template('<p>{Stratum}<br>{Definition}</p>', layer.feature.properties);
+    return L.Util.template('<p>{OPERNAME}<br>{ADDRESS}<br>{PLACENAME}, {ZIP5}</p>', layer.feature.properties);
   });
 
 //var legend = L.control({position: 'bottomright'});
@@ -69,7 +69,7 @@ var legend = L.control({position: 'bottomleft'});
 
     var div = L.DomUtil.create('div', 'info legend');
     labels = ['<strong>Land Use Strata</strong>'],
-    categories = ['Correct Address','Interpolated on Correct Street','Correct Street Only','Medium Cultivation: Postal Code'];
+    categories = ['Correct Address','Interpolated on Correct Street','Correct Street Only','Postal Code'];
 
     for (var i = 0; i < categories.length; i++) {
 
