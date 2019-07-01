@@ -68,7 +68,7 @@ function getColor(d) {
 var title = L.control({position: 'topright'});
     title.onAdd = function (map) {
 
-    var div = L.DomUtil.create('div', 'info legend');
+    var div = L.DomUtil.create('div', 'info title');
     labels = ['<strong>Cali Dairies</strong>'],
     //categories = ['Correct Address','Interpolated on Correct Street','Correct Street Only','Postal Code'];
 
