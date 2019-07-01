@@ -90,7 +90,7 @@ var legend = L.control({position: 'bottomleft'});
     legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');
-    labels = ['<strong>Land Use Strata</strong>'],
+    labels = ['<strong>Address Quality</strong>'],
     categories = ['Correct Address','Interpolated on Correct Street','Correct Street Only','Postal Code'];
 
     for (var i = 0; i < categories.length; i++) {
